@@ -5,11 +5,9 @@ import Home from '../pages/Home';
 import { useAppSelector } from '../helpers/CostumHook';
 import SignIn from '../pages/admin/SignIn';
 import Dashboard from '../pages/admin/Dashboard';
-import Cookies from "js-cookie";
 
 const Routers: React.FC = () => {
   const { userName } = useAppSelector((state) => state.user);
-  const token = Cookies.get("adminToken");
   return (
     <Routes>
       <Route path="/" element={userName ? <Navigate to="/home" replace /> : <SignUp />} />
