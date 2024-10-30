@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { Toaster, toast } from 'react-hot-toast';
@@ -21,11 +21,8 @@ const SignInSchema = Yup.object().shape({
 
 
 const SignIn: React.FC = () => {
-  const [showSignUp, setShowSignUp] = useState(false);
   const navigate = useNavigate()
-  const handleSwitch = () => {
-    setShowSignUp(!showSignUp);
-  };
+
 
   const handleGoogleSignIn = async () => {
     try {
