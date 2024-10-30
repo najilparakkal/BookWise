@@ -70,7 +70,7 @@ export default {
   },
   upload: async (email: string, data: string) => {
     try {
-      const uploadPdf = await repository.upload(email, data);
+      const uploadPdf:any = await repository.upload(email, data);
       if (uploadPdf?.success) {
         return { success: true, message: "PDF uploaded successfully" };
       } else {
