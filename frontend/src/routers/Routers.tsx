@@ -13,7 +13,7 @@ const Routers: React.FC = () => {
       <Route path="/" element={userName ? <Navigate to="/home" replace /> : <SignUp />} />
       <Route path="/home" element={userName ? <Home /> : <Navigate to="/" />} />
       <Route path="/admin" element={<SignIn />} />
-      <Route path='/dashboard' element={ <Dashboard />} />
+      <Route path='/dashboard' element={<Dashboard />} />
     </Routes>
   );
 };
